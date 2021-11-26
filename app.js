@@ -14,6 +14,9 @@ const recipesByIngr = axios
     const recipes = response.data;
     recipes.forEach((recipe) => {
       const recipeContainer = document.querySelector(".recipe__container");
+      const recipeCard = document.createElement("div");
+      recipeCard.classList.add("recipe__card");
+      recipeContainer.appendChild(recipeCard);
       const recipeImage = document.createElement("img");
       recipeImage.classList.add("recipe__image");
       recipeImage.src = recipe.image;

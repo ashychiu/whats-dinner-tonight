@@ -14,28 +14,67 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <section class="hero">
-      <div class="hero__container">
-        <img class="hero__image" src="./images/hero-image.jpg" />
-        <p class="hero__heading">We build dinner together.</p>
-        <h1 class="hero__title">what's <br />dinner <br />tonight?</h1>
-        <p class="hero__tagline">
-          Recipe suggestions based on what you've in your fridge
-        </p>
-        <p class="hero__slogan">bon appetit!</p>
-        <button class="hero__getstarted">Get Started</button>
-      </div>
-    </section>
-    <section class="recipe__container">
-      <h2>Curated For You</h2>
-      <div class="recipe__list">
-        <!-- Example liked article. Delete this at the end. -->
-        <!-- <a class="fave-item" href="">
+    <main>
+      <section class="hero">
+        <div class="hero__container">
+          <img class="hero__image" src="./assets/hero-image.jpg" />
+          <p class="hero__heading">We build dinner together.</p>
+          <h1 class="hero__title">what's <br />dinner <br />tonight?</h1>
+          <p class="hero__tagline">
+            Recipe suggestions based on what you've in your fridge
+          </p>
+          <p class="hero__slogan">bon appetit!</p>
+          <!-- <button class="hero__getstarted">Get Started</button> -->
+        </div>
+      </section>
+      <section class="recipe__container">
+        <h2 class="recipe__section-ttile">Curated For You</h2>
+        <div class="recipe__list">
+          <!-- Example liked article. Delete this at the end. -->
+          <!-- <a class="fave-item" href="">
         <img src="" alt="article featured image" class="fave-image">
         <h4>This is a liked article headline.</h4>
       </a> -->
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__container">
+        <h2 class="footer__title">Get in Touch</h2>
+        <div class="footer__social-container">
+          <a
+            class="footer__social-link"
+            href="http://instagram.com"
+            target="_blank"
+          >
+            <img class="footer__social-icon" src="./assets//Icon-instagram.svg"
+          /></a>
+          <a
+            class="footer__social-link"
+            href="http://facebook.com"
+            target="_blank"
+          >
+            <img class="footer__social-icon" src="./assets/Icon-facebook.svg"
+          /></a>
+          <a
+            class="footer__social-link"
+            href="http://twitter.com"
+            target="_blank"
+          >
+            <img class="footer__social-icon" src="./assets/Icon-twitter.svg"
+          /></a>
+        </div>
+        <p class="footer__author">
+          Ashley Chiu © 2021 |
+          <a
+            class="footer__author-link"
+            href="https://github.com/ashychiu/"
+            target="_blank"
+            >GitHub</a
+          >
+        </p>
       </div>
-    </section>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="app.js"></script>
   </body>
