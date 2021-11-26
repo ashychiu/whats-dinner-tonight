@@ -8,15 +8,27 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <section class="recipe___container">
+    <section class="hero">
+      <div class="hero__container">
+        <img class="hero__image" src="./images/hero-image.jpg" />
+        <p class="hero__heading">We build dinner together.</p>
+        <h1 class="hero__title">what's <br />dinner <br />tonight?</h1>
+        <p class="hero__tagline">
+          Recipe suggestions based on what you've in your fridge
+        </p>
+        <p class="hero__slogan">bon appetit!</p>
+        <button class="hero__getstarted">Get Started</button>
+      </div>
+    </section>
+    <section class="recipe__container">
       <h2>Curated For You</h2>
-      <div class="fave-container__list">
+      <div class="recipe__list">
         <!-- Example liked article. Delete this at the end. -->
         <!-- <a class="fave-item" href="">
         <img src="" alt="article featured image" class="fave-image">
@@ -24,15 +36,6 @@
       </a> -->
       </div>
     </section>
-    <div class="news-container">
-      <h2>Latest News</h2>
-      <div class="news-container__list">
-        <!-- Example article structure. Delete this at the end. -->
-        <!-- <h3 class="article">
-        This is an article headline.<button class="like-button">❤️</button>
-      </h3> -->
-      </div>
-    </div>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="app.js"></script>
   </body>

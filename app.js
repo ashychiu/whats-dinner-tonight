@@ -13,14 +13,15 @@ const recipesByIngr = axios
     console.log(response);
     const recipes = response.data;
     recipes.forEach((recipe) => {
-      const recipeContainer = document.querySelector(".recipe___container");
+      const recipeContainer = document.querySelector(".recipe__container");
       const recipeImage = document.createElement("img");
-      recipeImage.classList.add("recipe-image");
+      recipeImage.classList.add("recipe__image");
       recipeImage.src = recipe.image;
       recipeImage.alt = recipe.title;
       recipeContainer.appendChild(recipeImage);
 
       const recipeTitle = document.createElement("h4");
+      recipeTitle.classList.add("recipe__title");
       recipeTitle.innerText = recipe.title;
       recipeContainer.appendChild(recipeTitle);
     });
