@@ -1,0 +1,20 @@
+// Responsive design - media query breakpoints
+$desktop-breakpoint: 1280px;
+$tablet-breakpoint: 768px;
+
+// Site colours
+$primary-black: #323232;
+$primary-silver: #afafaf;
+$primary-white: #ffffff;
+$secondary-darkblack: #000000;
+$secondary-mercury: #e1e1e1;
+$secondary-alabaster: #fafafa;
+
+//mobile padding
+$padding: 1.5rem 1rem 1rem 1rem;
+
+//tablet padding
+$tablet-padding: 3rem 2.25rem 2.25rem 2.25rem;
+
+//wider left & right padding for desktop
+$desktop-padding: 0 6.25rem;
