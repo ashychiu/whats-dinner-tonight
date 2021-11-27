@@ -1,31 +1,40 @@
-const RECIPE_API_URL = "https://api.spoonacular.com/recipes/findByIngredients";
-const RECIPE_API_KEY = "29b6685456e446c5a96ec3af10753892";
-let ingredients = "chicken";
-let numOfRecipes = "10";
+const RECIPE_API_URL = "https://api.edamam.com/api/recipes/v2";
+const RECIPE_API_ID = "3f0cd962";
+const RECIPE_API_KEY = "ece4a6f9c51a3f87d1225fd520a22345";
 
-// https://api.spoonacular.com/recipes/findByIngredients?apiKey=29b6685456e446c5a96ec3af10753892&ingredients=eggs&number=2
+let ingredients = "salmon, potato, egg";
 
 const recipesByIngr = axios
   .get(
-    `${RECIPE_API_URL}?apiKey=${RECIPE_API_KEY}&ingredients=${ingredients}&number=${numOfRecipes}`
+    `https://api.edamam.com/api/recipes/v2?type=public&q=${ingredients}&app_id=${RECIPE_API_ID}&app_key=${RECIPE_API_KEY}&random=true`
   )
   .then((response) => {
     console.log(response);
-    const recipes = response.data;
+    const recipes = response.data.hits;
     recipes.forEach((recipe) => {
-      const recipeContainer = document.querySelector(".recipe__container");
+      const recipeList = document.querySelector(".recipe__list");
       const recipeCard = document.createElement("div");
       recipeCard.classList.add("recipe__card");
-      recipeContainer.appendChild(recipeCard);
+      recipeList.appendChild(recipeCard);
+
+      const recipeLink = document.createElement("a");
+      recipeLink.href = recipe.recipe.url;
+      recipeLink.target = "_blank";
+      recipeCard.appendChild(recipeLink);
+
       const recipeImage = document.createElement("img");
       recipeImage.classList.add("recipe__image");
-      recipeImage.src = recipe.image;
-      recipeImage.alt = recipe.title;
-      recipeContainer.appendChild(recipeImage);
+      recipeImage.src = recipe.recipe.image;
+      recipeImage.alt = recipe.recipe.label;
+      recipeLink.appendChild(recipeImage);
+
+      const recipeContainer = document.createElement("div");
+      recipeContainer.classList.add("recipe__card-container");
+      recipeLink.appendChild(recipeContainer);
 
       const recipeTitle = document.createElement("h4");
       recipeTitle.classList.add("recipe__title");
-      recipeTitle.innerText = recipe.title;
+      recipeTitle.innerText = recipe.recipe.label;
       recipeContainer.appendChild(recipeTitle);
     });
   });

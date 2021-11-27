@@ -14,6 +14,16 @@
     <link rel="stylesheet" href="./styles/styles.css" />
   </head>
   <body>
+    <header class="header">
+      <div class="header__container">
+        <a class="header__logo-link" href="./index.html"
+          ><img
+            class="header__logo"
+            src="./assets/icon-logo.svg"
+            alt="!Overcooked Logo"
+        /></a>
+      </div>
+    </header>
     <main>
       <section class="hero">
         <div class="hero__container">
@@ -22,15 +32,30 @@
           <h1 class="hero__title">what's <br />dinner <br />tonight?</h1>
           <h1 class="hero__title-tab-desk">what's dinner tonight?</h1>
           <p class="hero__tagline">
-            Recipe suggestions based on what you've in your fridge
+            Recipe suggestions based on what you've in the fridge
           </p>
           <p class="hero__slogan">bon appetit!</p>
           <!-- <button class="hero__getstarted">Get Started</button> -->
         </div>
       </section>
       <section class="recipe__container">
-        <h2 class="recipe__section-ttile">Curated For You</h2>
+        <h2 class="recipe__section-title">Curated For You</h2>
         <div class="recipe__list">
+          <!-- DOM start here, axios.get from API -->
+        </div>
+        <!-- <div class="recipe__list">
+          <div class="recipe__card">
+            <img
+              class="recipe__image"
+              src="https://spoonacular.com/recipeImages/640803-312x231.jpg"
+              alt="Avatar"
+              style="width: 100%"
+            />
+            <div class="recipe__container">
+              <h4><b>Crispy Buttermilk Fried Chicken</b></h4>
+              <p>Architect & Engineer</p>
+            </div>
+          </div>
           <div class="recipe__card">
             <img
               class="recipe__image"
@@ -55,57 +80,7 @@
             />
             <h4 class="recipe__title">Lemon and Garlic Slow Roasted Chicken</h4>
           </div>
-          <div class="recipe__card">
-            <img
-              class="recipe__image"
-              src="https://spoonacular.com/recipeImages/715525-312x231.jpg"
-              alt="Slow Cooker Rosemary Whole Chicken"
-            />
-            <h4 class="recipe__title">Slow Cooker Rosemary Whole Chicken</h4>
-          </div>
-          <div class="recipe__card">
-            <img
-              class="recipe__image"
-              src="https://spoonacular.com/recipeImages/716342-312x231.jpg"
-              alt="Chicken Suya"
-            />
-            <h4 class="recipe__title">Chicken Suya</h4>
-          </div>
-          <div class="recipe__card">
-            <img
-              class="recipe__image"
-              src="https://spoonacular.com/recipeImages/641901-312x231.jpg"
-              alt="Easy Chicken Pot Pie"
-            />
-            <h4 class="recipe__title">Easy Chicken Pot Pie</h4>
-          </div>
-          <div class="recipe__card">
-            <img
-              class="recipe__image"
-              src="https://spoonacular.com/recipeImages/660220-312x231.jpg"
-              alt="Skillet Roasted Chicken &amp; Potatoes"
-            />
-            <h4 class="recipe__title">
-              Skillet Roasted Chicken &amp; Potatoes
-            </h4>
-          </div>
-          <div class="recipe__card">
-            <img
-              class="recipe__image"
-              src="https://spoonacular.com/recipeImages/645879-312x231.jpg"
-              alt="Grilled Sesame Chicken"
-            />
-            <h4 class="recipe__title">Grilled Sesame Chicken</h4>
-          </div>
-          <div class="recipe__card">
-            <img
-              class="recipe__image"
-              src="https://spoonacular.com/recipeImages/636411-312x231.jpg"
-              alt="Buffalo Chicken Wings Wonton Wraps"
-            />
-            <h4 class="recipe__title">Buffalo Chicken Wings Wonton Wraps</h4>
-          </div>
-        </div>
+        </div> -->
       </section>
     </main>
     <footer class="footer">
