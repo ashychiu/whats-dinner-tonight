@@ -14,73 +14,53 @@
     <link rel="stylesheet" href="./styles/styles.css" />
   </head>
   <body>
-    <header class="header">
-      <div class="header__container">
-        <a class="header__logo-link" href="./index.html"
-          ><img
-            class="header__logo"
-            src="./assets/icon-logo.svg"
-            alt="!Overcooked Logo"
-        /></a>
-      </div>
-    </header>
     <main>
       <section class="hero">
         <div class="hero__container">
           <img class="hero__image" src="./assets/hero-image.jpg" />
           <p class="hero__heading">We build dinner together.</p>
           <h1 class="hero__title">what's <br />dinner <br />tonight?</h1>
-          <h1 class="hero__title-tab-desk">what's dinner tonight?</h1>
+          <a href="./index.html"
+            ><h1 class="hero__title-tab-desk">what's dinner tonight?</h1></a
+          >
           <p class="hero__tagline">
             Recipe suggestions based on what you've in the fridge
           </p>
           <p class="hero__slogan">bon appetit!</p>
-          <!-- <button class="hero__getstarted">Get Started</button> -->
+          <div class="form__container">
+            <form id="searchform" class="searchform">
+              <input
+                required
+                class="form-input"
+                type="search"
+                id="searchbar"
+                name="searchbar"
+                placeholder="🔍 eg chicken, potato, cauliflower"
+              /><button id="submitButton" type="submit">SEARCH</button>
+            </form>
+          </div>
         </div>
       </section>
       <section class="recipe__container">
-        <h2 class="recipe__section-title">Curated For You</h2>
-        <div class="recipe__list">
-          <!-- DOM start here, axios.get from API -->
-        </div>
-        <!-- <div class="recipe__list">
-          <div class="recipe__card">
-            <img
-              class="recipe__image"
-              src="https://spoonacular.com/recipeImages/640803-312x231.jpg"
-              alt="Avatar"
-              style="width: 100%"
-            />
-            <div class="recipe__container">
-              <h4><b>Crispy Buttermilk Fried Chicken</b></h4>
-              <p>Architect & Engineer</p>
-            </div>
-          </div>
-          <div class="recipe__card">
-            <img
-              class="recipe__image"
-              src="https://spoonacular.com/recipeImages/640803-312x231.jpg"
-              alt="Crispy Buttermilk Fried Chicken"
-            />
-            <h4 class="recipe__title">Crispy Buttermilk Fried Chicken</h4>
-          </div>
-          <div class="recipe__card">
-            <img
-              class="recipe__image"
-              src="https://spoonacular.com/recipeImages/665734-312x231.jpg"
-              alt="Zucchini Chicken Omelette"
-            />
-            <h4 class="recipe__title">Zucchini Chicken Omelette</h4>
-          </div>
-          <div class="recipe__card">
-            <img
-              class="recipe__image"
-              src="https://spoonacular.com/recipeImages/649495-312x231.jpg"
-              alt="Lemon and Garlic Slow Roasted Chicken"
-            />
-            <h4 class="recipe__title">Lemon and Garlic Slow Roasted Chicken</h4>
-          </div>
-        </div> -->
+        <h2 class="recipe__section-title">All Food Is Good</h2>
+        <p class="how-to-use">
+          Don't ever throw away rotten food again! <br />
+          Use every ingredient you have<br />
+          (to get rid of...)<br /><br />
+          Enter ingredient names in the search, recipe suggestions will be
+          shown.<br /><br />
+          Didn't see anything you like? <br />Click search again for a new
+          selection. You can also add more ingredients along the results.
+        </p>
+        <p class="how-to-use howtouse-tab-desk">
+          Don't ever throw away rotten food again! <br />
+          Use every ingredient you have (to get rid of...)<br /><br />
+          Enter ingredient names in the search bar, recipe suggestions will be
+          shown. <br />
+          Didn't see anything you like? Click search again for a new selection
+          of recipes. <br />
+          You can also add more ingredients along the results.
+        </p>
       </section>
     </main>
     <footer class="footer">
