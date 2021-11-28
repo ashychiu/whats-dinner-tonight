@@ -3,7 +3,7 @@
 #### Description
 
 The purpose of this project is to participate a mini-hackathon to showcase what I have learned so far 5 weeks into Brainstation's Web Development Bootcamp.
-Including HTML by using BEM, CSS by using SASS & flex box, JavaScript DOM manipulation, addEventListener and API request by using axios.
+Including Responsive design with HTML by using BEM, CSS by using SASS & flex box, JavaScript DOM manipulation, addEventListener and API request by using axios.
 
 #### Background
 

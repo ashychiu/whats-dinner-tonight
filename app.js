@@ -1,17 +1,13 @@
-window.onscroll = function () {
-  myFunction();
-};
+const searchbar = document.getElementById("searchform");
+const sticky = searchbar.offsetTop;
 
-var searchbar = document.getElementById("searchform");
-var sticky = searchbar.offsetTop;
-
-function myFunction() {
-  if (window.pageYOffset >= sticky + 500) {
+window.onscroll = () => {
+  if (window.pageYOffset >= sticky + 600) {
     searchbar.classList.add("sticky");
   } else {
     searchbar.classList.remove("sticky");
   }
-}
+};
 
 const RECIPE_API_URL = "https://api.edamam.com/api/recipes/v2";
 const RECIPE_API_ID = "3f0cd962";
@@ -22,8 +18,6 @@ const recipeContainer = document.querySelector(".recipe__container");
 const form = document.getElementById("searchform");
 form.addEventListener("submit", (event) => {
   event.preventDefault();
-  console.log(event.target.searchbar.value);
-
   const recipesByIngr = axios
     .get(
       `https://api.edamam.com/api/recipes/v2?type=public&q=${event.target.searchbar.value}&app_id=${RECIPE_API_ID}&app_key=${RECIPE_API_KEY}&random=true`
@@ -35,7 +29,7 @@ form.addEventListener("submit", (event) => {
         recipeNotFound();
       } else if (response.data.hits) {
         recipeContainer.innerHTML = "";
-        console.log(response.data.hits);
+
         const sectionTitle = document.createElement("h2");
         sectionTitle.classList.add("recipe__section-title");
         sectionTitle.setAttribute("id", "recipe-results");
@@ -58,7 +52,6 @@ form.addEventListener("submit", (event) => {
     });
 });
 
-// let ingredients = "salmon, potato, egg, spinach";
 function recipeNotFound() {
   const recipeList = document.createElement("div");
   recipeList.classList.add("recipe__list");
@@ -70,7 +63,6 @@ function recipeNotFound() {
 }
 
 function displayRecipes(responseData) {
-  // const recipes = response.data.hits;
   responseData.forEach((recipe) => {
     let recipeList = document.querySelector(".recipe__list");
     const recipeCard = document.createElement("div");
