@@ -23,8 +23,8 @@ form.addEventListener("submit", (event) => {
       `https://api.edamam.com/api/recipes/v2?type=public&q=${event.target.searchbar.value}&app_id=${RECIPE_API_ID}&app_key=${RECIPE_API_KEY}&random=true`
     )
     .then((response) => {
-      console.log(response.data.hits.length);
-      if (response.data.hits.length <= 0) {
+      console.log(response.data);
+      if (response.data.hits.length === 0) {
         recipeContainer.innerHTML = "";
         recipeNotFound();
       } else if (response.data.hits) {
@@ -35,10 +35,12 @@ form.addEventListener("submit", (event) => {
         sectionTitle.setAttribute("id", "recipe-results");
         sectionTitle.innerText = "Curated For You";
         recipeContainer.appendChild(sectionTitle);
+
         const searchTerms = document.createElement("p");
         searchTerms.classList.add("recipe__searchterms");
         searchTerms.innerText = `Showing recipes with "${event.target.searchbar.value}"`;
         recipeContainer.appendChild(searchTerms);
+
         const recipeList = document.createElement("div");
         recipeList.classList.add("recipe__list");
         recipeContainer.appendChild(recipeList);
@@ -65,7 +67,7 @@ function recipeNotFound() {
 function displayRecipes(responseData) {
   responseData.forEach((recipe) => {
     let recipeList = document.querySelector(".recipe__list");
-    const recipeCard = document.createElement("div");
+    const recipeCard = document.createElement("article");
     recipeCard.classList.add("recipe__card");
     recipeList.appendChild(recipeCard);
 
