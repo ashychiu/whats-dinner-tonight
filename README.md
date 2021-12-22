@@ -16,3 +16,6 @@ To download this project and view it locally, run the following commands in your
 git clone [https://github.com/ashychiu/whats-dinner-tonight.git | git@github.com:ashychiu/whats-dinner-tonight.git]
 cd git-practice
 code .
+
+### See it live here
+http://ashychiu.com/whats-dinner-tonight/
