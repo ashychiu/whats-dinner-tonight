@@ -377,7 +377,6 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
 }
 
 .searchform {
@@ -385,7 +384,7 @@ a:hover {
 }
 
 input {
-  width: 18.125rem;
+  width: 90%;
   height: 3.125rem;
   font-size: 1rem;
   font-family: "Montserrat", sans-serif, Helvetica, Arial;
@@ -412,7 +411,7 @@ input {
 }
 
 #submitButton {
-  width: 18.125rem;
+  width: 90%;
   height: 3.125rem;
   margin: 0rem 1rem 0.625rem 1rem;
   font-size: 0.875rem;
