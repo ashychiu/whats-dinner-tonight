@@ -9,13 +9,13 @@ including HTML by using BEM with responsive design, CSS by using SASS & flex box
 
 Ever since the pandemic, more and more people stay home and cook. A lot of us run out of idea of "what is for dinner tonight" especially those who are working or have to cook for their families. Sometimes food goes bad before we figure what to do with them. This application provides recipe suggestions based on what ingredients are available.
 
+### See it live here
+http://ashychiu.com/whats-dinner-tonight/
+
 #### Usage
 
 To download this project and view it locally, run the following commands in your terminal:
 
-git clone [https://github.com/ashychiu/whats-dinner-tonight.git | git@github.com:ashychiu/whats-dinner-tonight.git]
-cd git-practice
-code .
+git clone git@github.com:ashychiu/whats-dinner-tonight.git
 
-### See it live here
-http://ashychiu.com/whats-dinner-tonight/
+
