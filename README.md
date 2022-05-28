@@ -9,8 +9,11 @@ including HTML by using BEM with responsive design, CSS by using SASS & flex box
 
 Ever since the pandemic, more and more people stay home and cook. A lot of us run out of idea of "what is for dinner tonight" especially those who are working or have to cook for their families. Sometimes food goes bad before we figure what to do with them. This application provides recipe suggestions based on what ingredients are available.
 
+<img width="1425" alt="image" src="https://user-images.githubusercontent.com/32230130/170809448-00eb953c-0c32-4d26-84e2-07dbd535e257.png">
+
+
 ### See it live here
-http://ashychiu.com/whats-dinner-tonight/
+https://whats-dinner-tonight.vercel.app/
 
 #### Usage
 
